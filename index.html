@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government KYC Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="#">
+      <h2>Login</h2>
+      <div class="input-field" id="username">
+        <input type="text" required>
+        <label>Enter your Name</label>
+      </div>
+      <div class="input-field" id="password">
+        <input type="password" required>
+        <label>Enter your Aadhar No.</label>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="#"></a>
+      </div>
+      <button type="button" onclick="fuc()">Log In</button>
+      <div class="register">
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </div>
+    </form>
+  </div>
+  <script>
+    function fuc() {
+      var name = document.getElementById("username").getElementsByTagName("input")[0].value;
+      var aadhar = document.getElementById("password").getElementsByTagName("input")[0].value;
+      
+      if (name === 'piyush' && aadhar === '1234') {
+        alert('You have successfully logged in');
+        window.location.assign("test.html");
+      } else {
+        alert('Wrong Username or Aadhar No.');
+      }
+    }
+  </script>
+</body>
+</html>
